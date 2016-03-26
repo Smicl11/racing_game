@@ -17,7 +17,7 @@ $(document).ready(function() {
 
   function Player(keybutton, win) {
     this.keybutton = keybutton;
-    this.win = win;
+    this.win = win; //create function with a for loop counting number of 'keyup' to 34 then alert winner based on who reached 34 keypresses first. 
     this.move = function() {
       $(window).on('keydown', function moveRight(event) {
           if(event.keyCode === 81) {
@@ -26,6 +26,12 @@ $(document).ready(function() {
             $('#player2').animate({ 'left': '+=10px' }, 0);
           }
         });
-    };
+      };
   }
+
+
+
 });
+
+
+//34 keypresses to get to the end of the track.

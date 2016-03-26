@@ -11,9 +11,10 @@ h1 {
   margin: 20px 20px 20px 20px;
 }
 
-.player1, .player2 {
+#player1, #player2 {
   height: 100px; width: 100px;
   color: black;
   background: blue;
   margin: 20px 20px 20px 20px;
+  position: relative;
 }

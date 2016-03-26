@@ -6,24 +6,24 @@ console.log("JS has loaded!");
 $(document).ready(function() {
   console.log("the document is ready");
 
-  $(window).keypress(function(event) {
-    console.log("hi world");
-    if(event.keypress === 81) {
-      $('.player1').animate({ 'right': '50px' }, 'slow');
-      console.log("You pressed P");
-    } else if(event.keypress === 80) {
-      $('.player2').animate({ 'right': '50px' }, 'slow');
-      console.log("You pressed Q");
-    }
+  var playerOne = new Player (81, 0);
+  var playerTwo = new Player (80, 0);
 
-  });
+  playerOne.move();
+  playerTwo.move();
 
-  function Player(color, keyCode) {
-    this.color = color;
-    this.keyCode = keyCode;
+  function Player(keybutton, win) {
+    this.keybutton = keybutton;
     this.win = win;
-//    this.move = $('')
+    this.move = function() {
+      $(window).on('keydown', function moveRight(event) {
+          if(event.keyCode === keybutton) {
+            $('#player1').animate({ 'left': '50px' }, 'fast');
+          } else if(event.keyCode === keybutton) {
+            $('#player2').animate({ 'left': '50px' }, 'slow');
+          }
+        }
+      );
+    };
   }
-
 });
-//event listener for keybord key presses to move players

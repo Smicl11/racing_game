@@ -9,6 +9,9 @@ $(document).ready(function() {
   var playerOne = new Player (81, 0);
   var playerTwo = new Player (80, 0);
 
+  console.log(playerTwo);
+  console.log(playerOne);
+
   playerOne.move();
   playerTwo.move();
 
@@ -17,13 +20,12 @@ $(document).ready(function() {
     this.win = win;
     this.move = function() {
       $(window).on('keydown', function moveRight(event) {
-          if(event.keyCode === keybutton) {
-            $('#player1').animate({ 'left': '50px' }, 'fast');
-          } else if(event.keyCode === keybutton) {
-            $('#player2').animate({ 'left': '50px' }, 'slow');
+          if(event.keyCode === 81) {
+            $('#player1').animate({ 'left': '+=10px' }, 0);
+          } else if(event.keyCode === 80) {
+            $('#player2').animate({ 'left': '+=10px' }, 0);
           }
-        }
-      );
+        });
     };
   }
 });

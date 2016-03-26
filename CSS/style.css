@@ -1,0 +1,19 @@
+h1 {
+  text-align: center;
+  font-size: 50px;
+  margin: 20px 20px 20px 20px;
+}
+
+.track1, .track2 {
+  position: relative;
+  width: 800px; height: 150px;
+  border: 2px solid red;
+  margin: 20px 20px 20px 20px;
+}
+
+.player1, .player2 {
+  height: 100px; width: 100px;
+  color: black;
+  background: blue;
+  margin: 20px 20px 20px 20px;
+}

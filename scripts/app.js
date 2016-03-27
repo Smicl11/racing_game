@@ -3,8 +3,7 @@ console.log("JS has loaded!");
 $(document).ready(function() {
   console.log("the document is ready");
 
-  //create function with a for loop counting number of 'keyup' to 34 then alert winner based on who reached 34 keypresses then refreshes the page to restart the game.
-
+  //detects winner once player div reaches the end of the track div then resets the page to start a new game.
   function winner() {
     if ($('#player1').css('left') === '650px') {
       alert("Player One Wins!!!");
@@ -35,7 +34,3 @@ $(document).ready(function() {
   });
 
 });
-
-//code reset button here!
-
-//34 keypresses to get to the end of the track.

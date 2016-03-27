@@ -8,6 +8,11 @@ $(document).ready(function() {
   function winner() {
     if ($('#player1').css('left') === '650px') {
       alert("Player One Wins!!!");
+      location.reload();
+    }
+    if ($('#player2').css('left') === '650px') {
+      alert("Player Two Wins!!!");
+      location.reload();
     }
   }
 
@@ -24,6 +29,10 @@ $(document).ready(function() {
   }
 
   vroomVroom();
+
+  $('button').on("click", function() {
+    window.location.reload();
+  });
 
 });
 

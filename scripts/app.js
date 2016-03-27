@@ -1,5 +1,6 @@
 console.log("JS has loaded!");
 
+//Wait for the document to finish loading before running the below script.
 $(document).ready(function() {
   console.log("the document is ready");
 
